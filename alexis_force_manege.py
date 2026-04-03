@@ -3,11 +3,15 @@ from idlelib.outwin import file_line_pats
 from tkinter.constants import BOTTOM
 from tkinter import messagebox
 def renvoyer_age():
-    age = entryage.get()
-    taille = entrytaille.get()
+    age = int(entryage.get())
+    taille = float(entrytaille.get())
 
-if age >= 15:
-  labelallow.config(text="Manège autorisé", fg="blue")
+    if age >= 15:
+      labelallow.config(text="Manège autorisé", fg="blue")
+    else: labelallow.config(text=" refusé")
+        if taille >= 1.10:
+            labelallow.config(text="validé)")
+
 
 fenetre = tk.Tk()
 fenetre.geometry("450x300")
