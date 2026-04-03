@@ -4,7 +4,10 @@ from tkinter.constants import BOTTOM
 from tkinter import messagebox
 def renvoyer_age():
     age = entryage.get()
-    messagebox.showinfo("Age", age)
+    taille = entrytaille.get()
+
+if age >= 15:
+  labelallow.config(text="Manège autorisé", fg="blue")
 
 fenetre = tk.Tk()
 fenetre.geometry("450x300")
@@ -23,4 +26,6 @@ entrytaille =tk.Entry(fenetre)
 entrytaille.pack(fill='both',padx=130,pady=3)
 buttonenv = tk.Button(fenetre, text="Envoyer", bg='white', command=renvoyer_age)
 buttonenv.pack(fill='both',padx=185,pady=9)
+labelallow =tk.Label(fenetre, text="")
+labelallow.pack(fill='both',padx=0,pady=0,side='bottom')
 fenetre.mainloop()
