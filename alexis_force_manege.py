@@ -3,7 +3,8 @@ from idlelib.outwin import file_line_pats
 from tkinter.constants import BOTTOM
 from tkinter import messagebox
 def renvoyer_age():
-    messagebox.showinfo("Bonjour", "Bonjour")
+    age = entryage.get()
+    messagebox.showinfo("Age", age)
 
 fenetre = tk.Tk()
 fenetre.geometry("450x300")
